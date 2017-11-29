@@ -29,7 +29,7 @@ define('DB_USER', 'ywang');
 define('DB_PASSWORD', '12345678');
 
 /** MySQL hostname */
-define('DB_HOST', 'ywang-project4.c3trkfnnajvx.us-west-2.rds.amazonaws.com:3306');
+define('DB_HOST', 'ywang-test.c3trkfnnajvx.us-west-2.rds.amazonaws.com:3306');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
