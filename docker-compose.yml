@@ -1,0 +1,22 @@
+version: '2'
+services:
+  mysql:
+    build: ./mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: wordpress-db
+  php:
+    build: ./php
+    ports:
+      - '8001:80'
+    restart: always
+    environment:
+       WORDPRESS_DB_HOST: ywang-project4.c3trkfnnajvx.us-west-2.rds.amazonaws.com:3306
+       WORDPRESS_DB_USER: ywang
+       WORDPRESS_DB_PASSWORD: 12345678
+    volumes:
+      - ./html:/var/www/html
+    depends_on:
+      - mysql
+volumes:
+  db:
