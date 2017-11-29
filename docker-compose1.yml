@@ -1,0 +1,16 @@
+version: '2'
+services:
+  php:
+    build: ./php
+    ports:
+      - '8010:80'
+    restart: always
+    environment:
+       DB_USER: ywang
+       DB_NAME: wordpress-db
+       DB_PASSWORD: 12345678
+       DB_HOST: ywang-project4.c3trkfnnajvx.us-west-2.rds.amazonaws.com
+    volumes:
+      - ./html:/var/www/html
+    
+
